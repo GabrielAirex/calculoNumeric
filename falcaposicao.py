@@ -5,7 +5,7 @@ import numpy as np
 
 
 def f(x):
-    return 31-((9.8*x)/13)*(1.-np.exp(-6.0*(13.0/x)))
+    return -3*x**(4)-4*x**(2)+5*x+6
 
 
 def falsaposicao(a,b,Erro,itMax):
@@ -24,10 +24,10 @@ def falsaposicao(a,b,Erro,itMax):
     return(x,Er,it)
 
 
-a = 52
-b = 55
-Erro = 10**-4
-itMax = 6
+a = 0
+b = 2
+Erro = 10**-10
+itMax = 5
 
 m=np.arange(a , b , 1)
 plt.plot(m , f(m))

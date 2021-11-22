@@ -3,16 +3,24 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-//definição da função que será usada
+
 def f(x):
-    return 31-((9.8*x)/13)*(1.-np.exp(-6.0*(13.0/x)))
-//Onde definiremos o tamanho do intervalo
-a= 40
-b = 140
-// gera o vetor intervalo e o espaçamento
-m=np.arange(a,b,1)
-// faz o plot da função
+    return ((15.26*x**2)/2)-0.5
+
+def ft1(x):
+    return 1.526*x-0.5763
+
+def ft2(x):
+    return 1.526*x-0.5763 + 7.63*(x-0.1)**2
+a= 0
+b = 0.256
+
+m=np.arange(a,b,0.001)
+
 plt.plot(m,f(m))
-// chama o plot
+
+plt.plot(m,ft2(m))
+
 plt.show()
+
 

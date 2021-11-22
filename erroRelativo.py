@@ -7,8 +7,8 @@ def precisao(x,xold):
     Er = np.abs((x - xold) / x)
     return (Er)
 
-x=0.493721
-xold=0.49212
+x=0.51747
+xold=0.51671
 res = precisao(x,xold)
 
 print('O valor do erro foi:',res)

@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import math
 import numpy as np
 def f(x):
-    return x**(2)*np.cos(x)+0.5
+    return 85*x-85*x*(1.04)**(x)-18.24
 
 
 
@@ -14,14 +14,14 @@ def secante(x0,x1, Erro, itMax):
     while(Er >= Erro and it<itMax):
         xa2 =xa1
         xa1 =x
-        x = xa1 - f(xa1)*(xa2-xa1)/(f(xa2) - f(xa1))
+        x = xa1 - (f(xa1)*(xa2-xa1))/(f(xa2) - f(xa1))
         Er = np.abs((x-xa1)/x)
         it = it+1
     return (x, Er, it)
-x0=-2.68
-x1=-1.39
-Erro = 10**-4
-itMax=2
+x0=2
+x1=-12
+Erro = 10**(-0)
+itMax=4
 res = secante(x0,x1, Erro, itMax)
 
 print('O valor da raiz é:',res[0])
